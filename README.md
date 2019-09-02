@@ -14,5 +14,5 @@ brew install crowdin@3
 
 #### Crowdin CLI (version 2)
 ```
-brew install crowdin
+brew install crowdin@2
 ```
