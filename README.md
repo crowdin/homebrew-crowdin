@@ -1,18 +1,31 @@
-# homebrew-crowdin
-Homebrew Tap for Crowdin
+# Homebrew Tap for Crowdin
 
 ### Installation
 
-```
-brew tap crowdin/crowdin
+Add Crowdin to your list of Homebrew taps:
+
+```bash
+$ brew tap crowdin/crowdin
 ```
 
-#### Crowdin CLI (version 3)
-```
-brew install crowdin@3
+To install crowdin version 2:
+
+```bash
+$ brew install crowdin@2
 ```
 
-#### Crowdin CLI (version 2)
+To install crowdin version 3:
+
+```bash
+$ brew install crowdin@3
 ```
-brew install crowdin@2
+**Note!** Crowdin version 3 works only with Crowdin Enterprise 
+and uses new format of [Configuration File](https://support.crowdin.com/enterprise/configuration-file/#writing-a-simple-configuration-file).
+
+### Usage
+
+Use the following method to run the app:
+
+```bash
+$ crowdin
 ```
