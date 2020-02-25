@@ -1,8 +1,8 @@
 class CrowdinAT3 < Formula
-  desc "Command-line tool allows you to manage resources with crowdin.com"
-  homepage "https://support.crowdin.com/cli-tool/"
-  url "https://downloads.crowdin.com/cli/v2/crowdin-cli-three-3.0.0.zip"
-  sha256 "190b2154e0755f7a286007e5e1ce38cfd57091dda804bd46b3131c175525293e"
+  desc "Crowdin CLI is a command-line tool that allows you to manage and synchronize localization resources with your Crowdin project."
+  homepage "https://support.crowdin.com/cli-tool-v3/"
+  url "https://downloads.crowdin.com/cli/v3/crowdin-cli.zip"
+  sha256 "2216184eb9302e3480ce6ee361f505866447deab30bacdd9d4eab96d04161e65"
 
   bottle :unneeded
 
