@@ -14,8 +14,8 @@ class CrowdinAT3 < Formula
     libexec.install "crowdin-cli.jar"
     bin.write_jar_script libexec/"crowdin-cli.jar", "crowdin"
 
-    bash_completion.install "crowdin_completion" => "crowdin_completion"
-    zsh_completion.install "crowdin_completion" => "crowdin_completion"
+    bash_completion.install "3.1.4/crowdin_completion" => "crowdin_completion"
+    zsh_completion.install "3.1.4/crowdin_completion" => "crowdin_completion"
   end
 
   test do
