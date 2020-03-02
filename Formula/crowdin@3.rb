@@ -2,7 +2,7 @@ class CrowdinAT3 < Formula
   desc "Crowdin CLI is a command-line tool that allows you to manage and synchronize localization resources with your Crowdin project."
   homepage "https://support.crowdin.com/cli-tool-v3/"
   url "https://downloads.crowdin.com/cli/v3/crowdin-cli.zip"
-  sha256 "2216184eb9302e3480ce6ee361f505866447deab30bacdd9d4eab96d04161e65"
+  sha256 "4356a43eb81975fe6a8520d947c6e406f04f98e950d75b02653fe7c2c5676f82"
 
   bottle :unneeded
 
@@ -13,6 +13,9 @@ class CrowdinAT3 < Formula
   def install
     libexec.install "crowdin-cli.jar"
     bin.write_jar_script libexec/"crowdin-cli.jar", "crowdin"
+
+    bash_completion.install "crowdin_completion"
+    zsh_completion.install "crowdin_completion"
   end
 
   test do
