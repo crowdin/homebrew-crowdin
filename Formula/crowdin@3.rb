@@ -3,7 +3,7 @@ class CrowdinAT3 < Formula
   homepage "https://support.crowdin.com/cli-tool-v3/"
   url "https://downloads.crowdin.com/cli/v3/crowdin-cli-3.1.13.zip"
   sha256 "a913f37d03523ff361d6839369afec07b63abaee56ec265d604dbc6dfb8aac9a"
-  version :"3.1.13"
+  version "3.1.13"
 
   bottle :unneeded
 
