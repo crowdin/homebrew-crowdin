@@ -8,19 +8,20 @@ Add Crowdin tap to your list of Homebrew taps:
 $ brew tap crowdin/crowdin
 ```
 
-To install Crowdin CLI version 2:
-
-```bash
-$ brew install crowdin@2
-```
-
-To install Crowdin CLI version 3:
+To install Crowdin CLI v3:
 
 ```bash
 $ brew install crowdin@3
 ```
 
-**Note!** Crowdin 3 is currently in beta status.
+To install Crowdin CLI v2:
+
+```bash
+$ brew install crowdin@2
+```
+
+**Note!** Crowdin CLI v2 is no longer supported.
+
 For more details see [Console Client](https://support.crowdin.com/cli-tool-v3/) and [Configuration File](https://support.crowdin.com/configuration-file-v3/) articles.
 
 ### Usage
