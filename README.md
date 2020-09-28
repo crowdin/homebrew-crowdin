@@ -32,6 +32,13 @@ Use the following method to run the app:
 crowdin
 ```
 
+### Update
+
+```console
+brew upgrade crowdin/crowdin/crowdin@3
+```
+
+
 ### How to update sha256 checksum?
 
 1. Download [zip-archive](https://downloads.crowdin.com/cli/v3/crowdin-cli.zip)
