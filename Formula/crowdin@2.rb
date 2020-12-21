@@ -8,7 +8,7 @@ class CrowdinAT2 < Formula
   
   keg_only :versioned_formula
 
-  depends_on :java => "1.7+"
+  depends_on "openjdk"
 
   def install
     libexec.install "crowdin-cli.jar"
