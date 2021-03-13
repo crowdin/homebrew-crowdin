@@ -1,5 +1,9 @@
 # Homebrew Tap for Crowdin
 
+### Status
+
+[![homebrew downloads](https://img.shields.io/homebrew/installs/dy/crowdin?logo=homebrew)](https://formulae.brew.sh/formula/crowdin)
+
 ### Installation
 
 Add Crowdin tap to your list of Homebrew taps:
