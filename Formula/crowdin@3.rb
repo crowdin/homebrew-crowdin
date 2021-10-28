@@ -1,9 +1,9 @@
 class CrowdinAT3 < Formula
   desc "Crowdin CLI is a command-line tool that allows you to manage and synchronize localization resources with your Crowdin project."
   homepage "https://support.crowdin.com/cli-tool/"
-  url "https://downloads.crowdin.com/cli/v3/crowdin-cli-3.7.0.zip"
-  sha256 "d9340be64da775c9058ce397373edc955a703d4312b51e3181dd4ffaa521342f"
-  version "3.7.0"
+  url "https://downloads.crowdin.com/cli/v3/crowdin-cli-3.7.1.zip"
+  sha256 "5a80c5055d4d89dd72e7b308ad314c381db2a87454aef869f7be03cf96a06abd"
+  version "3.7.1"
 
   bottle :unneeded
 
