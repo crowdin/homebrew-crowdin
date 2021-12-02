@@ -5,8 +5,6 @@ class CrowdinAT3 < Formula
   sha256 "ee9f838b819ccedc33c9b2537055e5ba7d7934561b24df1e1a6274cbd6e27f2d"
   version "3.7.2"
 
-  bottle :unneeded
-
   keg_only :versioned_formula
 
   depends_on "openjdk"
