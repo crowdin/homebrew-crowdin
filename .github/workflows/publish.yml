@@ -1,0 +1,24 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'The new version number (in 3.x.x format)'
+        required: true
+
+jobs:
+  homebrew:
+    name: Bump Homebrew formula
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: mislav/bump-homebrew-formula-action@v2
+        with:
+          create-pullrequest: false
+          formula-path: Formula/crowdin@3.rb
+          tag-name: ${{ github.event.inputs.version }}
+          download-url: https://downloads.crowdin.com/cli/v3/crowdin-cli-${{ github.event.inputs.version }}.zip
+          homebrew-tap: crowdin/homebrew-crowdin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
