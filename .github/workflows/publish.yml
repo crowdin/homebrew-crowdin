@@ -7,6 +7,9 @@ on:
         description: 'The new version number (in 3.x.x format)'
         required: true
 
+permissions:
+  contents: write
+
 jobs:
   homebrew:
     name: Bump Homebrew formula
