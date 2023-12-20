@@ -21,7 +21,7 @@ jobs:
           create-pullrequest: false
           formula-path: Formula/crowdin@3.rb
           tag-name: ${{ github.event.inputs.version }}
-          download-url: https://downloads.crowdin.com/cli/v3/crowdin-cli-${{ github.event.inputs.version }}.zip
+          download-url: https://github.com/crowdin/crowdin-cli/releases/download/${{ github.event.inputs.version }}/crowdin-cli.zip
           homebrew-tap: crowdin/homebrew-crowdin
         env:
           COMMITTER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
