@@ -12,21 +12,13 @@ Add Crowdin tap to your list of Homebrew taps:
 brew tap crowdin/crowdin
 ```
 
-To install Crowdin CLI v3:
+To install Crowdin CLI:
 
 ```console
 brew install crowdin@3
 ```
 
-To install Crowdin CLI v2:
-
-```console
-brew install crowdin@2
-```
-
-**Note!** Crowdin CLI v2 is no longer supported.
-
-For more details see [Console Client](https://support.crowdin.com/cli-tool-v3/) and [Configuration File](https://support.crowdin.com/configuration-file-v3/) articles.
+See the [official documentation](https://crowdin.github.io/crowdin-cli/) for more details.
 
 ### Usage
 
@@ -41,7 +33,6 @@ crowdin
 ```console
 brew upgrade crowdin/crowdin/crowdin@3
 ```
-
 
 ### How to update sha256 checksum?
 
