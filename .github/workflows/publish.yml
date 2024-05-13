@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'The new version number (in 3.x.x format)'
+        description: 'The new version number (in x.x.x format)'
         required: true
 
 permissions:
@@ -19,7 +19,7 @@ jobs:
       - uses: mislav/bump-homebrew-formula-action@v2
         with:
           create-pullrequest: false
-          formula-path: Formula/crowdin@3.rb
+          formula-path: Formula/crowdin@4.rb
           tag-name: ${{ github.event.inputs.version }}
           download-url: https://github.com/crowdin/crowdin-cli/releases/download/${{ github.event.inputs.version }}/crowdin-cli.zip
           homebrew-tap: crowdin/homebrew-crowdin
