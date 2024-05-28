@@ -15,7 +15,7 @@ brew tap crowdin/crowdin
 To install Crowdin CLI:
 
 ```console
-brew install crowdin@3
+brew install crowdin@4
 ```
 
 See the [official documentation](https://crowdin.github.io/crowdin-cli/) for more details.
@@ -31,12 +31,12 @@ crowdin
 ### Update
 
 ```console
-brew upgrade crowdin/crowdin/crowdin@3
+brew upgrade crowdin/crowdin/crowdin@4
 ```
 
 ### How to update sha256 checksum?
 
-1. Download [zip-archive](https://downloads.crowdin.com/cli/v3/crowdin-cli.zip)
+1. Download [zip-archive](https://downloads.crowdin.com/cli/v4/crowdin-cli.zip)
 2. Execute command `shasum -a 256 crowdin-cli.zip`
-3. Update `sha256` value in the [crowdin@3.rb](https://github.com/crowdin/homebrew-crowdin/blob/master/Formula/crowdin%403.rb) file
+3. Update `sha256` value in the [crowdin@4.rb](https://github.com/crowdin/homebrew-crowdin/blob/master/Formula/crowdin%404.rb) file
 4. Create Pull Request.
