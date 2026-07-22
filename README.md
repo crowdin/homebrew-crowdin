@@ -15,7 +15,7 @@ brew tap crowdin/crowdin
 To install Crowdin CLI:
 
 ```console
-brew install crowdin@4
+brew install crowdin@5
 ```
 
 See the [official documentation](https://crowdin.github.io/crowdin-cli/) for more details.
@@ -31,12 +31,16 @@ crowdin
 ### Update
 
 ```console
-brew upgrade crowdin/crowdin/crowdin@4
+brew upgrade crowdin/crowdin/crowdin@5
 ```
 
-### How to update sha256 checksum?
+### How to publish a new version?
 
-1. Download [zip-archive](https://downloads.crowdin.com/cli/v4/crowdin-cli.zip)
-2. Execute command `shasum -a 256 crowdin-cli.zip`
-3. Update `sha256` value in the [crowdin@4.rb](https://github.com/crowdin/homebrew-crowdin/blob/master/Formula/crowdin%404.rb) file
-4. Create Pull Request.
+Run the [Publish workflow](https://github.com/crowdin/homebrew-crowdin/actions/workflows/publish.yml) with the version to publish. It regenerates [crowdin@5.rb](https://github.com/crowdin/homebrew-crowdin/blob/master/Formula/crowdin%405.rb) from [a template](.github/templates/crowdin%405.rb.erb) using the checksums file attached to the [crowdin-cli release](https://github.com/crowdin/crowdin-cli/releases) and pushes the change.
+
+To update the formula manually, run the same script locally and create a Pull Request:
+
+```console
+curl -fsSL https://github.com/crowdin/crowdin-cli/releases/download/<version>/crowdin-cli_checksums.sha256 -o checksums.sha256
+ruby .github/scripts/update-formula.rb <version> checksums.sha256
+```

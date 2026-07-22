@@ -4,24 +4,36 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'The new version number (in x.x.x format)'
+        description: "The new version number (in x.x.x format)"
         required: true
 
 permissions:
   contents: write
 
 jobs:
-  homebrew:
-    name: Bump Homebrew formula
+  update-formula:
+    name: Bump crowdin@5 formula
     runs-on: ubuntu-latest
-
     steps:
-      - uses: mislav/bump-homebrew-formula-action@v2
-        with:
-          create-pullrequest: false
-          formula-path: Formula/crowdin@4.rb
-          tag-name: ${{ github.event.inputs.version }}
-          download-url: https://github.com/crowdin/crowdin-cli/releases/download/${{ github.event.inputs.version }}/crowdin-cli.zip
-          homebrew-tap: crowdin/homebrew-crowdin
+      - uses: actions/checkout@v4
+
+      - name: Update crowdin@5 formula
         env:
-          COMMITTER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ github.event.inputs.version }}
+        run: |
+          curl -fsSL "https://github.com/crowdin/crowdin-cli/releases/download/$VERSION/crowdin-cli_checksums.sha256" -o checksums.sha256
+
+          ruby .github/scripts/update-formula.rb "$VERSION" checksums.sha256
+          rm checksums.sha256
+
+          ruby -c Formula/crowdin@5.rb
+          git diff Formula/crowdin@5.rb
+
+      - name: Commit and push
+        env:
+          VERSION: ${{ github.event.inputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "crowdin@5 $VERSION"
+          git push
