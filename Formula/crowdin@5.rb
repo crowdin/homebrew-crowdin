@@ -1,7 +1,7 @@
 class CrowdinAT5 < Formula
   desc "Command-line tool to manage and synchronize localization resources with Crowdin"
   homepage "https://crowdin.github.io/crowdin-cli/"
-  version "5.0.2"
+  version "5.1.0"
   license "MIT"
   version_scheme 1
 
@@ -9,22 +9,22 @@ class CrowdinAT5 < Formula
   # Edit the template, not this file.
   on_macos do
     on_arm do
-      url "https://github.com/crowdin/crowdin-cli/releases/download/5.0.2/crowdin-darwin-arm64"
-      sha256 "8137c048dec5bcafed5595c4f571ca3f7ce241515fc4d40b1f2700049396658d"
+      url "https://github.com/crowdin/crowdin-cli/releases/download/5.1.0/crowdin-darwin-arm64"
+      sha256 "7c6554f08740d96c32bd347f87da0c1c71e07b872b4e7dd909b790b060909b1f"
     end
     on_intel do
-      url "https://github.com/crowdin/crowdin-cli/releases/download/5.0.2/crowdin-darwin-x64"
-      sha256 "ec9d66cf442db6db1fe1f0183d1ad0826770e79ecdadff6349c7b3864f87f115"
+      url "https://github.com/crowdin/crowdin-cli/releases/download/5.1.0/crowdin-darwin-x64"
+      sha256 "7fbb8076de385b675323ee0f1701492825826d3af8540de931659cfbae7cb92c"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/crowdin/crowdin-cli/releases/download/5.0.2/crowdin-linux-arm64"
-      sha256 "99b1eb59ef464d03eb28ec7f281bbce825360897b68b3c34a4b5afb0a8f1daea"
+      url "https://github.com/crowdin/crowdin-cli/releases/download/5.1.0/crowdin-linux-arm64"
+      sha256 "a90283123908a1e2b31a645a98251b92610f30ecfbd3e54542a8bdd240f2ce9c"
     end
     on_intel do
-      url "https://github.com/crowdin/crowdin-cli/releases/download/5.0.2/crowdin-linux-x64"
-      sha256 "1806cdbc4c539ace92cb68e9fd8f41de3bf319f11de28f6137cf0e23a7929b50"
+      url "https://github.com/crowdin/crowdin-cli/releases/download/5.1.0/crowdin-linux-x64"
+      sha256 "9ac1771dd284f5ef0cf1ecac7ea4c8293242ad98ace697c33bcc4e7f7f989bbc"
     end
   end
 
